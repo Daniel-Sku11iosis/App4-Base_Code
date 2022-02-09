@@ -36,26 +36,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        //Amount of "Yes" responses suggesting allergies:
-	var allergy_count = 0;
-	//Amount of "Yes" responses suggesting cold:
-        var cold_count = 0;
-	//Variable for chance of allergies on results page:
-	var ap = 0;
-	//Variable for chance of cold on results page:
-	var cp = 0;
-	//Counts amount of "Yes" responses suggesting allergies:
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        //Amount of "Yes" responses suggesting benign:
+	var benign_count = 0;
+	//Amount of "Yes" responses suggesting malignant:
+        var malignant_count = 0;
+	//Variable for chance of benign on results page:
+	var bp = 0;
+	//Variable for chance of malignant on results page:
+	var mp = 0;
+	//Counts amount of "Yes" responses suggesting benign:
+        function benignAdd(){
+            benign_count = benign_count + 1;
         }
-	//Counts amount of "Yes" responses suggesting cold:
-        function coldAdd(){
-            cold_count = cold_count + 1;
+	//Counts amount of "Yes" responses suggesting malignant:
+        function malignantAdd(){
+            malignant_count = malignant_count + 1;
         }
-	//Calculates percent chance of having the cold or allergies:
+	//Calculates percent chance of having benign or malignant melanoma:
 	function runResult(){
-		ap = allergy_count * 100 / 6;
-		cp = cold_count * 100 / 6;
+		bp = benign_count * 100 / 6;
+		mp = malignant_count * 100 / 6;
 		document.getElementById("results").innerHTML = "Probability it is allergies =" + ap + "%" + "<br> Probability it is a cold =" + cp + "%";
 	}
 		
